@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:splashSweet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="471.028" Width="672.197" WindowStyle="None">
+    <Grid Margin="10,10,8,3">
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,10,10,205">
+            <Grid HorizontalAlignment="Left" Height="46" Margin="9,9,0,0" VerticalAlignment="Top" Width="606">
+                <Label x:Name="label" Content="MENSAJES DE SWEET &amp; COFFEE" Margin="10" RenderTransformOrigin="0.474,-0.048"/>
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,263,10,10"/>
     </Grid>
 </Window>
