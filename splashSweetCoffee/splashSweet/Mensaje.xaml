@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Mensaje" Height="322.43" Width="540.187">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="241*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Label" Margin="10,10,282,14" RenderTransformOrigin="0.83,0.572"/>
     </Grid>
 </Window>

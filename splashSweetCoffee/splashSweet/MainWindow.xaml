@@ -4,14 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:splashSweet"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="471.028" Width="672.197" WindowStyle="None">
-    <Grid Margin="10,10,8,3">
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10,10,10,205">
-            <Grid HorizontalAlignment="Left" Height="46" Margin="9,9,0,0" VerticalAlignment="Top" Width="606">
-                <Label x:Name="label" Content="MENSAJES DE SWEET &amp; COFFEE" Margin="10" RenderTransformOrigin="0.474,-0.048"/>
-            </Grid>
-        </Border>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10,263,10,10"/>
+        Title="MainWindow" Height="480" Width="640" WindowStyle="None">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:Person}">
+            <Button Content="{Binding Name}" Tag="{Binding}" Click="Button_Click"></Button>
+        </DataTemplate>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FF1D6A14" Offset="1"/>
+            <GradientStop Color="#FF0F4B09"/>
+            <GradientStop Color="#FF29A61A" Offset="0.391"/>
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF26971A" Offset="0.661"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <Grid Margin="10,10,10,10" Background="White">
+        <StackPanel>
+            <ItemsControl ItemsSource="{Binding}"/>
+        </StackPanel>
     </Grid>
 </Window>
