@@ -23,25 +23,26 @@ namespace splashSweet
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new List<Person>
+            DataContext = new List<Menssage>
             {
-                new Person {Name="Stalin" },
-                new Person {Name="Carlos" },
-                new Person {Name="Jhonny" },
-                new Person {Name="Gabriela" }
+                new Menssage {mensaje="Prueba de Mensaje 1" ,persona="Carlos Fabre" },
+                new Menssage {mensaje="Prueba de Mensaje 2" ,persona="Stalin Mora"},
+                new Menssage {mensaje="Prueba de Mensaje 3" ,persona="Gabriela Fuentes"},
+                new Menssage {mensaje="Prueba de Mensaje 4" ,persona="Jhonny Idrovo"}
 
             };
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Person persona = ((Button)sender).Tag as Person;
-            MessageBox.Show(persona.Name);
+            Menssage mensaje = ((Button)sender).Tag as Menssage;
+            MessageBox.Show(mensaje.mensaje);
         }
     }
 
-    public class Person
+    public class Menssage
     {
-        public string Name { set; get; }
+        public string mensaje { set; get; }
+        public string persona { set; get; }
     }
 }

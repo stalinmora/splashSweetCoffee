@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:splashSweet"
         Title="MainWindow" Height="480" Width="640" WindowStyle="None">
     <Window.Resources>
-        <DataTemplate DataType="{x:Type local:Person}">
-            <Button Content="{Binding Name}" Tag="{Binding}" Click="Button_Click"></Button>
+        <DataTemplate DataType="{x:Type local:Menssage}">
+            <WrapPanel>
+                <TextBlock Text="{Binding mensaje}"></TextBlock>
+                <Button Content="{Binding persona}" Tag="{Binding}" Click="Button_Click"></Button>
+            </WrapPanel>
         </DataTemplate>
     </Window.Resources>
     <Window.Background>
@@ -23,6 +26,7 @@
     <Grid Margin="10,10,10,10" Background="White">
         <StackPanel>
             <ItemsControl ItemsSource="{Binding}"/>
+            
         </StackPanel>
     </Grid>
 </Window>
